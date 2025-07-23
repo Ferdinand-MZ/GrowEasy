@@ -5,7 +5,12 @@ import { Plus } from "lucide-react";
 import { getUserAccounts } from '@/actions/dashboard';
 import AccountCard from './_components/account-card';
 import { getCurrentBudget } from '@/actions/budget';
+<<<<<<< HEAD
 import { BudgetProgress } from "./_components/budget-progress";
+=======
+import BudgetProgress from './_components/budget-progress';
+
+>>>>>>> c408a44 (First Commit)
 
 async function DashboardPage() {
     const accounts = await getUserAccounts()
@@ -46,4 +51,11 @@ async function DashboardPage() {
   );
 }
 
+<<<<<<< HEAD
+=======
+console.log("AccountCard:", AccountCard);
+console.log("BudgetProgress:", BudgetProgress);
+
+
+>>>>>>> c408a44 (First Commit)
 export default DashboardPage

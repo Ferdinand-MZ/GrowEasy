@@ -4,8 +4,18 @@ import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle }
 import { Pencil } from 'lucide-react';
 import useFetch from '@/hooks/use-fetch';
 import { Progress } from "@/components/ui/progress";
+<<<<<<< HEAD
 
 const BudgetProgress = () => {
+=======
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Check, X } from 'lucide-react';
+import { toast } from 'sonner';
+import { updateBudget } from '@/actions/budget';
+
+const BudgetProgress =({ initialBudget, currentExpenses }) => {
+>>>>>>> c408a44 (First Commit)
     const [isEditing, setIsEditing] = useState(false);
     const [newBudget, setNewBudget] = useState(
         initialBudget?.amount?.toString() || ""
@@ -20,7 +30,11 @@ const BudgetProgress = () => {
         fn: updateBudgetFn,
         data, updatedBudget,
         error,
+<<<<<<< HEAD
     } = useFetch(updatedBudget)
+=======
+    } = useFetch(updateBudget)
+>>>>>>> c408a44 (First Commit)
 
     const handleUpdateBudget = async () => {
         const amount = parseFloat(newBudget);
@@ -59,7 +73,11 @@ const BudgetProgress = () => {
           <div className="flex items-center gap-2 mt-1">
             {isEditing ? (
               <div className="flex items-center gap-2">
+<<<<<<< HEAD
                 <Input type="number" value={newBudget} onChange={(e) => setNewBudget(e.target.value)} className="w-32" placeholder="Enter Amount" autofocus disabled={isLoading} />
+=======
+                <Input type="number" value={newBudget} onChange={(e) => setNewBudget(e.target.value)} className="w-32" placeholder="Enter Amount" autoFocus disabled={isLoading} />
+>>>>>>> c408a44 (First Commit)
                 <Button variant="ghost" size="icon" onClick={handleUpdateBudget} disabled={isLoading}>
                   <Check className="h-4 w-4 text-green-500" />
                 </Button>
@@ -79,7 +97,10 @@ const BudgetProgress = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         <CardAction>Card Action</CardAction>
+=======
+>>>>>>> c408a44 (First Commit)
       </CardHeader>
       <CardContent>
         {initialBudget && (
